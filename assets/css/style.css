@@ -5,7 +5,7 @@ html{
     background: rgba(0,0,0,.2);
 }
 .button-column{
-    background: black;
+    background: rgba(0,0,0,.9);
 }
 .search-row{
     display: flex;
@@ -17,6 +17,10 @@ html{
     justify-content: space-around;
     padding: 1rem;
 }
+button{
+    transition: .5s;
+}
+
 
 .radio{
     color: white;
@@ -26,9 +30,11 @@ html{
 
 .add-input{
     width: 80%;
-    padding: .2rem;
-    border-radius: .3rem;
+    padding: .3rem;
+    border-radius: .4rem;
     font-size: 1.2rem;
+    text-align: center;
+    border: solid black 2px;
 }
 
 
@@ -39,41 +45,62 @@ html{
     border-radius: .5rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
+    cursor: pointer;
 }
 
 .button-bank{
     display: flex;
     flex-wrap: wrap;
+    padding: .5rem;
 }
 .button-bank button{
     color: white;
-    background: rgba(255,255,255,.2);
+    background: rgba(255,255,255,.1);
     margin: .3rem;
+}
+.button-bank button:hover{
+    background: black;
 }
 
 .add-button{
     color: white;
     background: rgba(255,255,255,.2);
     padding: .5rem 3rem;
+ 
 }
 
+.add-button:hover{
+    background: black;
+    border: solid 1px #f7931e;
+}
+.gif-column .head-row{
+    background: rgba(0,0,0,.8);
+    border: solid 1px black;
+    margin-bottom: .5px;
+}
 .head-row{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: rgba(0,0,0,.7);
-    border-top: solid 2px rgba(255,255,255,.7);
-    border-bottom: solid 1px rgba(255,255,255,.3);
+    border-top: solid 1px rgba(255,255,255,.4);
+    border-bottom: solid 1px rgba(255,255,255,.4);
     padding: .3rem;
-    color: #f7931e;
+    color: white;
     font-family: sans-serif;
     text-transform: uppercase;
 }
 .clear-button{
     background: black;
-    border: solid white 2px;
+    border: solid rgba(255,255,255,.4) 1px;
     color: white;
 }
+
+.clear-button:hover{
+    border: solid 1px #f7931e;
+    color: #f7931e;
+}
+
 .card{
     display: flex;
     flex-direction: column;
@@ -83,6 +110,11 @@ html{
     background: rgba(0,0,0,.9);
     padding: 1rem;
 }
+.img-wrap,
+.info-wrap{
+    border: solid black 1px;
+}
+
 .img-wrap{
     display: flex;
     flex-direction: column;
@@ -95,7 +127,7 @@ html{
     object-fit: cover;
 }
 .info-wrap{
-    background: rgba(255,255,255,.2);
+    background: rgba(255,255,255,.05);
     padding: .5rem;
     display: flex;
     justify-content: center;
@@ -111,4 +143,61 @@ svg{
 
 svg:hover .cls-1{
     fill: #f7931e;
+    stroke: black;
+}
+
+@media only screen and (min-width:768px) {
+    .content{
+        display: flex;
+        font-size: 1rem;
+        width: 100vw;
+        min-height: 100vh;
+        justify-content: space-between;
+    }
+    .button-column{
+        width: 18rem;
+        border-right: black solid 2px;
+    }
+    .gif-column{
+        width: 80%;
+    }
+
+    .gif-column h2{
+        letter-spacing: .2rem;
+    }
+
+    .main-bank,
+    .favorites-bank{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .img-wrap{
+        height: auto;
+    }
+    
+    .add-input{
+        font-size: 1rem;
+    }
+
+
+    h2{
+        font-size: .8rem;
+    }
+
+    .clear-button,
+    .button-bank button{
+        padding: .3rem .5rem;
+    }
+
+    .add-button{
+        padding: .3rem  3rem;
+    }
+    .card{
+        height: 250px;
+        width: 250px;
+    }
+
+
+
 }

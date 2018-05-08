@@ -89,7 +89,7 @@ function placeholderText () {
     if($(this).attr("data-api") === "giphy"){
         $(".add-input").attr("placeholder", "Add a GIF button");
     } else if ($(this).attr("data-api")  === "omdb"){
-        $(".add-input").attr("placeholder", "Add a movie button");
+        $(".add-input").attr("placeholder", "Down for maintenance");
         console.log("omdb");
     }
 }
@@ -97,8 +97,9 @@ function placeholderText () {
 function clearContainer(){
     var api = $(this).attr("data-api");
     var target = $(this).attr("data-target");
-    eval($(this).attr("data-object"))[api] = [];
+    //eval($(this).attr("data-object"))[api] = [];
     $("."+target+"-"+api).empty();
+    console.log(target);
 }
 function animate(){
     if($(this).attr("data-toggle") === "still"){
