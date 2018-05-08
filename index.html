@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+        <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/style.css" rel ="stylesheet" type="text/css">
+        <!-- <link href="assets/images/favicon.png" rel = "shortcut icon" type="image/png"> -->
+        <title>GifTastic!</title>
+    </head>
+
+    <body>
+        <div class="content">
+            <section class="button-column">
+                <form class="search-row">
+                    <div class="radio">
+                        <input type="radio" name="API" data-api="giphy" value="GIPHY" checked> GIPHY
+                        <input type="radio" name="API" data-api="omdb" value="OMDB"> OMDB
+                        <input type="radio" name="API" data-api="api2" value="GIPHY"> API3
+                    </div>
+                    <div>
+                        <input class="add-input" placeholder="Add a GIF button">
+                    </div>
+                    <div>
+                        <button class="add-button">Add</button>
+                    </div>
+                </form>
+                <div class="buttons wrap-giphy" data-api="giphy">
+                    <div class="head-row">
+                        <h2>GIPHY buttons</h2>
+                        <button class="clear-button" data-object="apiButtons" data-target="buttons" data-api="giphy">Clear</button>
+                    </div>  
+                    <div class ="button-bank buttons-giphy">
+
+                    </div>
+
+                </div>
+                <div class="buttons wrap-omdb" data-api="omdb">   
+                    <div class="head-row">
+                            <h2>OMDB Buttons</h2>
+                            <button class="clear-button" data-object="apiButtons" data-target="buttons" data-api="omdb">Clear</button>
+                    </div>  
+                    <div class ="button-bank buttons-omdb" >
+                        
+                    </div>
+                </div>
+                <div class="buttons wrap-api2" data-api="api2">
+                    <div class="head-row">
+                            <h2>API 2 Buttons</h2>
+                            <button class="clear-button" data-object="apiButtons" data-target="buttons" data-api="api2">Clear</button>
+                    </div> 
+                    <div class ="button-bank buttons-api2">
+                        
+                    </div>                    
+                </div>
+
+            </section>
+            <section class="gif-column">
+                <div class="favorites-wrap" data-api="favorites">
+                    <div class="head-row"> 
+                        <h2>Favorites</h2>
+                        <button class="clear-button" data-target="favorites" data-api="bank">Clear</button>
+                    </div>
+                    <div class="favorites-bank"></div>
+                </div>
+                <div class="main-wrap" data-api="main">
+                    <div class="head-row">
+                        <h2>Results</h2>
+                        <button class="clear-button" data-target="main" data-api="bank">Clear</button>
+                    </div>
+                    <div class="main-bank"></div>
+                </div>
+            </section>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="assets/javascript/functions.js" type="text/javascript"></script>
+    </body>
+</html>
