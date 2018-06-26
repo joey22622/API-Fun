@@ -10,7 +10,7 @@ var apiButtons = {
 
 var apiIndex = {
     giphy : {
-        url : "http://api.giphy.com/v1/gifs/search?",
+        url : "https://api.giphy.com/v1/gifs/search?",
         query : "q",
         parameters : {
             apiKey : "ih2IbJeuF1j03d7wJ5MpKRi13l3cXBAp",
@@ -18,7 +18,7 @@ var apiIndex = {
         }
     },
     omdb : {
-        url: "http://www.omdbapi.com/?",
+        url: "https://www.omdbapi.com/?",
         query: "t",
         parameters : {
             apikey : "817c84de"
