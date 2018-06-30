@@ -103,13 +103,25 @@ button{
 
 .card{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: stretch;
+    align-items: stretch;
     border-radius: .5rem;
     margin: 1rem;
     background: rgba(0,0,0,.9);
     padding: 1rem;
+    box-shadow: 10px 10px 20px rgba(0,0,0,.3);
 }
+
+.card-content-wrap{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+}
+
 .img-wrap,
 .info-wrap{
     border: solid black 1px;
@@ -119,6 +131,7 @@ button{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
     height: 70vw;
     background: rgba(0,0,0,.9);
@@ -131,6 +144,43 @@ button{
     padding: .5rem;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: .7rem;
+    line-height: 1rem;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,.7);
+    transition: .5s;
+}
+.giphy-card .info-wrap{
+    display: none;
+}
+
+.fav-button{
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+    background: none;
+    max-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: .5s;
+    width: 100%;
+}
+.card:hover{
+    cursor: pointer;
+}
+.card:hover .info-wrap{
+    padding-bottom: 2.5rem;
+}
+.card:hover .fav-button{
+    max-height: 4rem;
+    opacity: 1;
 }
 
 svg{
@@ -144,6 +194,45 @@ svg{
 svg:hover .cls-1{
     fill: #f7931e;
     stroke: black;
+}
+
+.omdb-card .img-wrap{
+    justify-content: flex-start;
+}
+.info-wrap h3{
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-align: center;
+    padding: .5rem;
+}
+.info{
+    max-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: .5s;
+    text-align: center;
+}
+.cast{
+    text-align: center;
+    border-bottom: solid white 1px;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+h4{
+    display: block;
+    text-align: center;
+    font-size: .8rem;
+    border-top: solid white 1px;
+    font-weight: 400;
+    padding: .5rem;
+    margin-top: 1rem;
+
+}
+
+.omdb-card:hover .info{
+    max-height: 250px;
 }
 
 @media only screen and (min-width:768px) {
